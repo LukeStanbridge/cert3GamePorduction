@@ -64,6 +64,7 @@
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonController.cs" />
     <Compile Include="Assets\Scripts\PlayerWallet.cs" />
+    <Compile Include="Assets\Scripts\Ingame\BuildingDropPoint1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\license.txt" />
