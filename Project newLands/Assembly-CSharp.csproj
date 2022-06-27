@@ -72,8 +72,6 @@
     <Compile Include="Assets\Scripts\LookAtPlayer.cs" />
     <Compile Include="Assets\StarterAssets\ThirdPersonController\Scripts\ThirdPersonController.cs" />
     <Compile Include="Assets\Scripts\BulletTarget.cs" />
-    <Compile Include="Assets\Scripts\Ragdoll.cs" />
-    <Compile Include="Assets\Scripts\EnemyHealth.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

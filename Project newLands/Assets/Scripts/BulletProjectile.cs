@@ -8,6 +8,7 @@ public class BulletProjectile : MonoBehaviour
     [SerializeField] private Transform vfxHitRed;
 
     private Rigidbody bulletRigidbody;
+    private ThirdPersonShooterController ray;
 
     private void Awake()
     {
@@ -20,7 +21,7 @@ public class BulletProjectile : MonoBehaviour
         bulletRigidbody.velocity = transform.forward * speed;
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<BulletTarget>() != null)
         {

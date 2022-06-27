@@ -10,6 +10,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float maxTime = 1.0f;
     [SerializeField] private float maxDistance = 1.0f;
     float timer = 0.0f;
+    public int hitCounter;
 
     Animator animator;
 
@@ -17,9 +18,10 @@ public class EnemyAI : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        hitCounter = 0;
     }
 
-    private void Update()
+    public void Update()
     {
         timer -= Time.deltaTime;
         if (timer < 0.0f)
@@ -32,6 +34,22 @@ public class EnemyAI : MonoBehaviour
             timer = maxTime;
         }
         animator.SetFloat("Speed", agent.velocity.magnitude);
+        if (hitCounter == 3)
+        {
+            Die();
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "bullet")
+        {
+            hitCounter++;
+        }
+    }
+
+    private void Die()
+    {
+        animator.SetTrigger("death");
     }
     //https://www.youtube.com/watch?v=TpQbqRNCgM0 - follow AI
     //https://www.youtube.com/watch?v=oLT4k-lrnwg - damage AI
