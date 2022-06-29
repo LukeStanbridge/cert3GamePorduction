@@ -50,6 +50,7 @@ public class EnemyAI : MonoBehaviour
     private void Die()
     {
         animator.SetTrigger("death");
+        Destroy(this.gameObject, 5);
     }
     //https://www.youtube.com/watch?v=TpQbqRNCgM0 - follow AI
     //https://www.youtube.com/watch?v=oLT4k-lrnwg - damage AI
