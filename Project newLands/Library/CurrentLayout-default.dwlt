@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Project
   m_RootView: {fileID: 4}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 105
+  controlID: 220
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -98,7 +98,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 236
+  controlID: 76
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_MinSize: {x: 231, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 19
+  controlID: 77
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -450,10 +450,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 1076}
-      m_SelectedIDs: dcfe0f00
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: d6550100
       m_LastClickedID: 0
-      m_ExpandedIDs: 545cffff665cffff6e5cffff385dffff3a5dffff985dffffe4e8ffffe8e8fffff4e8fffff8e8ffff26e9ffff4ae9ffff5ee9ffff6ee9ffff7ae9ffff7ee9ffff82e9ffff8ae9ffffd8eaffff4cfbffffd44d0000544e0000044f0000085100004252000068550000ac5f0000ee6e0000207e0000267e0000507f0000547f0000
+      m_ExpandedIDs: 3efafeff98a1ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -515,23 +515,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Animations
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Animations
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\s213090\Documents\GitHub\cert3GamePorduction\Project
+  m_LastProjectPath: C:\Users\s213085\Documents\GitHub\cert3GamePorduction\Project
     newLands
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b29d0000
-    m_LastClickedID: 40370
-    m_ExpandedIDs: 00000000909d0000929d0000949d0000969d0000989d00009a9d00009c9d00009e9d0000a09d0000a29d0000a49d0000a69d000000ca9a3b
+    m_SelectedIDs: fc520100
+    m_LastClickedID: 86780
+    m_ExpandedIDs: 00000000d4520100d6520100d8520100da520100dc520100de520100e0520100e2520100e4520100e6520100e8520100ea52010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -559,7 +559,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000909d0000929d0000949d0000969d0000989d00009a9d00009c9d00009e9d0000a09d0000a29d0000a49d0000a69d0000
+    m_ExpandedIDs: 00000000d4520100d6520100d8520100da520100dc520100de520100e0520100e2520100e4520100e6520100e8520100ea520100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -712,7 +712,7 @@ MonoBehaviour:
         m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 0.5, y: 0.5}
+      m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
         m_Target: 0
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.23907147, y: -0.2163118, z: 0.055044867, w: 0.9452388}
     speed: 2
-    m_Value: {x: 0.23759969, y: -0.21634527, z: 0.054707687, w: 0.94538254}
+    m_Value: {x: -0.23907147, y: 0.2163118, z: -0.055044867, w: -0.9452389}
   m_Size:
     m_Target: 0.8827061
     speed: 2
