@@ -1,13 +1,19 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Base path: 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 
 Cmd: shutdown
 =======
+=======
+>>>>>>> Stashed changes
 Base path: 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 
 Cmd: shutdown
 
 Quitting shader compiler process
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
