@@ -6,11 +6,15 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     NavMeshAgent agent;
-    [SerializeField] private Transform playerTransform;
     [SerializeField] private float maxTime = 1.0f;
     [SerializeField] private float maxDistance = 1.0f;
     float timer = 0.0f;
     public int hitCounter;
+
+    public Transform player;
+    public float sightRange;
+    public LayerMask whatIsPlayer;
+    public bool playerInSightRange;
 
     Animator animator;
 
@@ -19,24 +23,20 @@ public class EnemyAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         hitCounter = 0;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     public void Update()
     {
-        timer -= Time.deltaTime;
-        if (timer < 0.0f)
+        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer); // check for sight range
+
+        if (playerInSightRange) ChasePlayer(); // follow and attack player with poo
+        else animator.SetFloat("Speed", 0); // stop player from playing ruinning animation
+
+        if (hitCounter >= 3)
         {
-            float sqDistance = (playerTransform.position - agent.destination).sqrMagnitude;
-            if (sqDistance > maxDistance * maxDistance)
-            {
-                agent.destination = playerTransform.position;
-            }
-            timer = maxTime;
-        }
-        animator.SetFloat("Speed", agent.velocity.magnitude);
-        if (hitCounter == 3)
-        {
-            Die();
+            sightRange = 0; // stop dead player from following player
+            Die(); // play death animation
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -50,10 +50,27 @@ public class EnemyAI : MonoBehaviour
     private void Die()
     {
         animator.SetTrigger("death");
-        Destroy(this.gameObject, 5);
+        Destroy(this.gameObject, 10);
     }
-    //https://www.youtube.com/watch?v=TpQbqRNCgM0 - follow AI
-    //https://www.youtube.com/watch?v=oLT4k-lrnwg - damage AI
-    //https://www.youtube.com/watch?v=1H9jrKyWKs0 - managing enemy state
-    //https://www.youtube.com/watch?v=Tf4TpNnwSd4 - AI shooting
+
+    private void ChasePlayer()
+    {
+        timer -= Time.deltaTime;
+        if (timer < 0.0f)
+        {
+            float sqDistance = (player.position - agent.destination).sqrMagnitude;
+            if (sqDistance > maxDistance * maxDistance)
+            {
+                agent.destination = player.position;
+            }
+            timer = maxTime;
+        }
+        animator.SetFloat("Speed", agent.velocity.magnitude);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, sightRange);
+    }
 }
