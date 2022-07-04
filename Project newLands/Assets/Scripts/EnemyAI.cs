@@ -50,7 +50,7 @@ public class EnemyAI : MonoBehaviour
     private void Die()
     {
         animator.SetTrigger("death");
-        Destroy(this.gameObject, 10);
+        Destroy(this.gameObject, 5);
     }
 
     private void ChasePlayer()

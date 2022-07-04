@@ -22,6 +22,7 @@ public class ThirdPersonShooterController : MonoBehaviour
     private Animator animator;
     private float aimRigWeight;
 
+
     private void Awake()
     {
         thirdPersonController = GetComponent<ThirdPersonController>();

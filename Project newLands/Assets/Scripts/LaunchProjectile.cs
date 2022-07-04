@@ -11,12 +11,13 @@ public class LaunchProjectile : MonoBehaviour
 
     private void Awake()
     {
-        enemyAI = GameObject.FindGameObjectWithTag("Enemy");
+        enemyAI = transform.parent.gameObject;
     }
     // Start is called before the first frame update
     void Start()
     {
         timer = 0;
+        target = Player.instance.enemyTarget.gameObject;
     }
 
     // Update is called once per frame
