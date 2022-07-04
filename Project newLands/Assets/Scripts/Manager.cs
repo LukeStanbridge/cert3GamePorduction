@@ -9,7 +9,7 @@ public class Manager : MonoBehaviour
 
     public void Start()
     {
- 
+
     }
     
     //level
@@ -17,7 +17,7 @@ public class Manager : MonoBehaviour
     {
         //loadingScreen.gameObject.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
    
