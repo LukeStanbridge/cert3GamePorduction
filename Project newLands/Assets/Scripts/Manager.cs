@@ -5,29 +5,19 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class Manager : MonoBehaviour
 {
-    public GameObject loadingScreen;
+    //public GameObject loadingScreen;
 
     public void Start()
     {
- 
+        Cursor.lockState = CursorLockMode.Confined;
     }
     
     //level
     public void PlayEasyMap()
     {
-        loadingScreen.gameObject.SetActive(true);
+        //loadingScreen.gameObject.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-    public void PlayMidMap()
-    {
-        loadingScreen.gameObject.SetActive(true);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-    }
-    public void PlayHardMap()
-    {
-        loadingScreen.gameObject.SetActive(true);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
     }
 
    
@@ -39,7 +29,7 @@ public class Manager : MonoBehaviour
 
     public void main()
     {
-        loadingScreen.gameObject.SetActive(true);
+        //loadingScreen.gameObject.SetActive(true);
         SceneManager.LoadScene("Mainmenu");
     }
     public void ResumeGame()
